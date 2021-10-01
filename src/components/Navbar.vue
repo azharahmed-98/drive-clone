@@ -1,7 +1,9 @@
 <template>
   <v-app-bar flat color="#ffffff">
-      <img src="@/assets/Google_Drive_Logo.png" height="40px" width="40px" class="ml-1" />
-      <a href="/" class="ml-2 mr-16 font-weight-regular text-h5">Drive</a>
+    <router-link to="/"
+      ><img src="@/assets/Google_Drive_Logo.png" height="40px" width="40px" class="ml-1"
+    /></router-link>
+    <a href="/" class="ml-2 mr-16 font-weight-regular text-h5">Drive</a>
     <v-text-field
       color="#5F6368"
       placeholder="Search in Drive"
@@ -15,6 +17,46 @@
     >
     </v-text-field>
     <v-spacer></v-spacer>
+    <v-tooltip bottom>
+      <template v-slot:activator="{ on }">
+        <v-btn fab depressed color="#FFFFFF" small v-on="on">
+          <v-icon color="#5F6368">
+            mdi-help-circle-outline
+          </v-icon>
+        </v-btn>
+      </template>
+      <span>support</span>
+    </v-tooltip>
+    <v-tooltip bottom>
+      <template v-slot:activator="{ on }">
+        <v-btn fab depressed color="#FFFFFF" small v-on="on" class="mr-8">
+          <v-icon color="#5F6368">
+            mdi-cog-outline
+          </v-icon>
+        </v-btn>
+      </template>
+      <span>settings</span>
+    </v-tooltip>
+    <v-tooltip bottom>
+      <template v-slot:activator="{ on }">
+        <v-btn fab depressed color="#FFFFFF" small v-on="on">
+          <v-icon color="#5F6368">
+            mdi-dots-grid
+          </v-icon>
+        </v-btn>
+      </template>
+      <span>Google apps</span>
+    </v-tooltip>
+    <v-tooltip bottom>
+      <template v-slot:activator="{ on }">
+        <v-avatar size="32" class="ml-2" v-on="on">
+          <img src="@/assets/avatar.png" alt="Profile Picture" />
+        </v-avatar>
+      </template>
+      <span>
+        Google Account
+      </span>
+    </v-tooltip>
   </v-app-bar>
 </template>
 

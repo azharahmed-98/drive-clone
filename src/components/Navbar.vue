@@ -25,7 +25,7 @@
           </v-icon>
         </v-btn>
       </template>
-      <span>support</span>
+      <span>Support</span>
     </v-tooltip>
     <v-tooltip bottom>
       <template v-slot:activator="{ on }">
@@ -35,7 +35,7 @@
           </v-icon>
         </v-btn>
       </template>
-      <span>settings</span>
+      <span>Settings</span>
     </v-tooltip>
     <v-tooltip bottom>
       <template v-slot:activator="{ on }">
